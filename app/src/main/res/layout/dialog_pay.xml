@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/alert_dialog_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxHeight="800dp"
+    android:minWidth="340dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/dialog_pay_root_bg">
+
+        <TextView
+            android:id="@+id/tvClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="12dp"
+            android:text="关闭"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvPayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="小礼物走起，支持老侯"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/payOptRecy"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPayTitle" />
+
+        <EditText
+            android:id="@+id/etMsg"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/payOptRecy"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/dialog_pay_et"
+            android:hint="留言"
+            android:padding="7dp"
+            android:maxLength="30"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvPayMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etMsg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="¥ 2,使用微信支付"
+            android:textColor="#EB6C5E"
+            android:textSize="15sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/butPay"
+            android:layout_below="@+id/tvPayMsg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/dialog_pay_but3"
+            android:text="支付"
+            android:layout_marginTop="16dp"
+            android:textColor="#ffff"
+            android:textSize="19sp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginBottom="23dp"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/frag_home_head" />
+
+</RelativeLayout>
+

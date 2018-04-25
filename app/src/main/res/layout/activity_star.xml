@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RatingBar
+        android:id="@+id/rb_normal"
+        style="@style/roomRatingBar"
+        android:numStars="5"
+        android:rating="2"
+        android:layout_centerInParent="true"
+        android:stepSize="1"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <com.norris.believer.view.RatingBar
+        android:id="@+id/rb_normal1"
+        android:layout_below="@+id/rb_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:starCount="5"
+        android:layout_marginTop="20dp"
+        app:starEmpty="@drawable/star_off"
+        app:starFill="@drawable/star_on"
+        app:starHalf="@drawable/star_on"
+        app:starImageSize="35dp"
+        app:starPadding="1dp"
+        app:starStep="2"
+        app:stepSize="Full"/>
+</RelativeLayout>

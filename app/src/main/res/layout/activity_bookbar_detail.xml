@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/act_bookbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:orientation="vertical">
+
+    <com.lhdd.reading4.widget.MyScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/videoview_rl"
+                android:layout_width="match_parent"
+                android:layout_height="210dp">
+
+
+                <com.lhdd.reading4.Netease.media.NEVideoView
+                    android:id="@+id/video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:onClick="onClickEmptyArea" />
+
+                <com.lhdd.reading4.Netease.util.NeteaseVideoController
+                    android:id="@+id/media_controller_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/video_view"
+                    android:orientation="vertical" />
+
+                <ProgressBar
+                    android:id="@+id/video_dialog_bar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:indeterminateDrawable="@drawable/dialog_probar" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_video_play_but"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/night_biz_media_bg" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/night_biz_media_bg_2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_header_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/bookbar_back"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="12dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/act_bookbar_back" />
+
+                    <ImageView
+                        android:id="@+id/bookbar_share"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="12dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/act_bookbar_share" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/bookbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text=""
+                    android:textColor="#4a4a4a"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/bookbar_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:drawableLeft="@mipmap/act_clo_class_item_read"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="100"
+                    android:textColor="#9b9b9b"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/bookbar_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bookbar_title"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="主讲人: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/bookbar_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bookbar_author"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#6f6f6f"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/bookbar_intro"
+                    android:background="#ffff" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f6f6f6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="推荐"
+                    android:textColor="#4a4a4a"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/bookbar_suggest1_rl"
+                        android:layout_width="0dp"
+                        android:layout_height="105dp"
+                        android:layout_weight="1"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/bookbar_suggest1_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/placeholder" />
+
+                        <TextView
+                            android:id="@+id/bookbar_suggest1_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/act_bookbar_video_tv_bg"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="3dp"
+                            android:text=""
+                            android:textColor="#ffff"
+                            android:textSize="11sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/bookbar_suggest2_rl"
+                        android:layout_width="0dp"
+                        android:layout_height="105dp"
+                        android:layout_weight="1"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/bookbar_suggest2_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/placeholder" />
+
+                        <TextView
+                            android:id="@+id/bookbar_suggest2_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/act_bookbar_video_tv_bg"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="3dp"
+                            android:text=""
+                            android:textColor="#ffff"
+                            android:textSize="11sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="评论"
+                android:textColor="#4a4a4a"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/bookbar_recy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffff"
+                    android:divider="#ffff" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+        </LinearLayout>
+
+
+    </com.lhdd.reading4.widget.MyScrollView>
+
+    <RelativeLayout
+        android:id="@+id/act_bookbar_comment_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d8d8d8" />
+
+        <EditText
+            android:id="@+id/act_comment_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="7.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="7.5dp"
+            android:layout_toLeftOf="@+id/act_comment_send"
+            android:background="@drawable/act_bookbar_bottom_comment"
+            android:hint="说点什么..."
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:paddingBottom="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp"
+            android:textColor="#4a4a4a"
+            android:textColorHint="#999999"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/act_comment_send"
+            android:layout_width="58dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="发送"
+            android:textColor="#4a4a4a"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/bookBar_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff"
+        />
+</RelativeLayout>

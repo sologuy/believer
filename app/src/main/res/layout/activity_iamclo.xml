@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lhdd.reading4.Activity.IAMCloActivity">
+
+    <include layout="@layout/template_public_header" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/act_clo_iam_clo_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:layout_marginTop="50dp" />
+    <View
+        android:layout_below="@+id/act_clo_iam_clo_list"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+</RelativeLayout>

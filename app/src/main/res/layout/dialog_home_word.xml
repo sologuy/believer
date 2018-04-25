@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_home_word_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b3333333"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/dialogHomeWordImage"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/placeholder_logo"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/dialogHomeWordClose"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="45dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/dialog_home_word_close" />
+</LinearLayout>

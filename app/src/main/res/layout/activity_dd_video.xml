@@ -1,0 +1,551 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/act_dd_video_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/yellow">
+
+        <ImageView
+            android:id="@+id/ibtn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/back_header" />
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.lhdd.reading4.widget.MyScrollView
+            android:id="@+id/myScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/videoview_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    >
+
+
+                        <com.lhdd.reading4.Netease.media.NEVideoView
+                            android:id="@+id/video_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="210dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:onClick="onClickEmptyArea" />
+
+
+                        <com.lhdd.reading4.Netease.util.NeteaseVideoController
+                            android:id="@+id/media_controller_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignBottom="@+id/video_view"
+                            android:orientation="vertical" />
+
+                        <ProgressBar
+                            android:id="@+id/video_dialog_bar"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:indeterminateDrawable="@drawable/dialog_probar" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_video_play_but"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/night_biz_media_bg" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/night_biz_media_bg_2" />
+                        </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/tvSeeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            android:text="共0人看过"
+                            android:textColor="@color/tv_color_text"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/imageMusic"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:layout_toLeftOf="@+id/imageFav"
+                            android:padding="5dp"
+                            android:src="@drawable/act_audio_icon" />
+
+                        <ImageView
+                            android:id="@+id/imageFav"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:padding="5dp"
+                            android:src="@drawable/act_video_favorite_press_no" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            android:src="@mipmap/act_video_ppy_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="代读PPT"
+                            android:textColor="@color/tv_color_title"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/act_video_download_but"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="15dp"
+                            android:padding="8dp"
+                            android:src="@drawable/act_video_download_pressed" />
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalScrollProductView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_ProductHorizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#fff">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/act_dd_video_improve_plan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="我的自学习改进计划"
+                        android:textColor="@color/tv_color_title"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/act_video_edit_but"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/act_press"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:text="修改"
+                        android:textColor="@color/f6a623"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/act_video_share_but"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/act_video_share_icon"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff">
+
+                    <LinearLayout
+                        android:id="@+id/act_video_improve_model_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#d7d7d7" />
+
+                        <TextView
+                            android:id="@+id/act_video_readbook_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/act_press"
+                            android:lineSpacingExtra="3dp"
+                            android:padding="12dp"
+                            android:text=""
+                            android:textColor="@color/tv_color_text"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/act_video_dsh_line" />
+
+                        <TextView
+                            android:id="@+id/act_video_readperson_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/act_press"
+                            android:lineSpacingExtra="3dp"
+                            android:padding="12dp"
+                            android:text=""
+                            android:textColor="@color/tv_color_text"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/act_video_dsh_line" />
+
+                        <TextView
+                            android:id="@+id/act_video_readthing_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/act_press"
+                            android:lineSpacingExtra="3dp"
+                            android:padding="12dp"
+                            android:text=""
+                            android:textColor="@color/tv_color_text"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/act_video_dsh_line" />
+
+                        <TextView
+                            android:id="@+id/act_video_readgift_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/act_press"
+                            android:lineSpacingExtra="3dp"
+                            android:padding="12dp"
+                            android:text=""
+                            android:textColor="@color/tv_color_text"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/act_video_dsh_line" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/act_video_improve_model_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#d7d7d7" />
+
+                        <LinearLayout
+                            android:id="@+id/act_video_edit_lin1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="106dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:padding="3dp"
+                                android:text="读书:"
+                                android:textColor="@color/f6a623"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/editTextSugg1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:gravity="top|left"
+                                android:hint="通过这次代读,对我最有启发的一个知识点是?"
+                                android:inputType="textMultiLine"
+                                android:lineSpacingExtra="2dp"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="10dp"
+                                android:singleLine="false"
+                                android:textColor="#333333"
+                                android:textColorHint="#d7d7d7"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/act_video_dsh_line" />
+
+
+                        <LinearLayout
+                            android:id="@+id/act_video_edit_lin2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="106dp"
+                            android:layout_marginTop="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:padding="3dp"
+                                android:text="读人:"
+                                android:textColor="@color/f6a623"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/editTextSugg2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:gravity="top|left"
+                                android:hint="通过这个知识点,对我个人将提升的是?"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="10dp"
+                                android:singleLine="false"
+                                android:textColor="#333333"
+                                android:textColorHint="#d7d7d7"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/act_video_dsh_line" />
+
+
+                        <LinearLayout
+                            android:id="@+id/act_video_edit_lin3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="106dp"
+                            android:layout_marginTop="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:padding="3dp"
+                                android:text="读事:"
+                                android:textColor="@color/f6a623"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/editTextSugg3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:gravity="top|left"
+                                android:hint="通过我个人的提升,会改变我工作上的事情是?"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="10dp"
+                                android:singleLine="false"
+                                android:textColor="#333333"
+                                android:textColorHint="#d7d7d7"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/act_video_dsh_line" />
+
+
+                        <LinearLayout
+                            android:id="@+id/act_video_edit_lin4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="106dp"
+                            android:layout_marginTop="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:padding="3dp"
+                                android:text="赠礼物:"
+                                android:textColor="@color/f6a623"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/editTextSugg4"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:gravity="top|left"
+                                android:hint="我给公司（部门）建设性的建议是？"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="10dp"
+                                android:singleLine="false"
+                                android:textColor="#333333"
+                                android:textColorHint="#d7d7d7"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/act_video_dsh_line" />
+
+                        <Button
+                            android:id="@+id/btnSave"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/act_color_primary_but"
+                            android:text="保  存"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </com.lhdd.reading4.widget.MyScrollView>
+
+        <FrameLayout
+            android:id="@+id/frameLayoutBottom"
+            android:layout_width="fill_parent"
+            android:layout_height="210dp"
+            android:layout_gravity="bottom"
+            android:visibility="gone">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPagerPPT"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

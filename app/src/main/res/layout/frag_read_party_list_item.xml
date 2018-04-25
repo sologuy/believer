@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/act_press">
+
+    <com.lhdd.reading4.view.CircleImageView
+        android:id="@+id/userHead"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/defaulthead" />
+
+    <TextView
+        android:id="@+id/msgCount"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/frag_tv_count_red"
+        android:gravity="center"
+        android:text="1"
+        android:visibility="gone"
+        android:layout_marginLeft="-10dp"
+        android:textColor="#fff"
+        android:layout_toRightOf="@+id/userHead"
+        android:layout_marginTop="5dp"
+        android:textSize="7sp" />
+
+    <TextView
+        android:id="@+id/userType"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:layout_alignBottom="@id/userHead"
+        android:layout_marginLeft="-10dp"
+        android:layout_toRightOf="@+id/userHead"
+        android:background="@drawable/act_color_primary_but"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="5sp" />
+
+    <TextView
+        android:id="@+id/partyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@id/userHead"
+        android:ellipsize="end"
+        android:maxLength="16"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/tv_color_title"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/createTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="13dp"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:text=""
+        android:visibility="gone"
+        android:textColor="#f6a623"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/memberNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/partyName"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/userHead"
+        android:paddingRight="2dp"
+        android:text=""
+        android:textColor="@color/tv_color_text"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvMoment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/partyName"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/memberNum"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text=""
+        android:textColor="@color/tv_color_text"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvRegulation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMoment"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/userHead"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=""
+        android:visibility="gone"
+        android:textColor="@color/tv_color_text"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvRegulation"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/gray" />
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/alert_dialog_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/alert_dialog_cuppy"
+    android:gravity="center"
+    android:maxHeight="800dp"
+    android:minWidth="300dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/alert_message"
+        android:layout_width="wrap_content"
+        android:maxWidth="250dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:textColor="#727272"
+        android:textSize="14sp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e2e2e2" />
+
+    <TextView
+        android:id="@+id/alert_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/alert_dialog_confirm"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="好的"
+        android:textColor="#727272"
+        android:textSize="16sp" />
+
+
+</LinearLayout>  
+

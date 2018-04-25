@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="top"
+            >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/imgFxWx"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/umeng_socialize_wechat" />
+                <TextView
+                    android:id="@+id/tvFxWx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgFxWx"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/tvFxPyq"
+                    android:text="微信分享" />
+                <TextView
+                    android:id="@+id/tvFxPyq"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvFxWx"
+                    android:layout_alignBottom="@+id/tvFxWx"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/imgFxWx"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="微信朋友圈" />
+
+                <ImageView
+                    android:id="@+id/imgFxPyq"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/tvFxPyq"
+                    android:layout_alignLeft="@+id/tvFxPyq"
+                    android:layout_marginLeft="25dp"
+                    android:src="@drawable/umeng_socialize_wxcircle" />
+
+
+            </RelativeLayout>
+        </FrameLayout>
+
+        <View
+            android:id="@+id/gvTemplate"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2"></View>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_gravity="bottom"
+            >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutCancel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="取消"
+                    android:textColor="@color/blue"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

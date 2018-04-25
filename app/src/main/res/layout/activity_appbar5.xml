@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.norris.believer.view.VerticalSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:collapsedTitleTextAppearance="@style/collapsedText"
+                app:contentScrim="#f39700"
+                app:expandedTitleMarginEnd="48dp"
+                app:expandedTitleMarginStart="48dp"
+                app:expandedTitleTextAppearance="@style/transparentText"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <include layout="@layout/view_rank_header" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#ffff"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabIndicatorHeight="2dp"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorPrimary"
+                app:tabTextAppearance="@android:style/TextAppearance.Holo.Small"
+                app:tabTextColor="#4a4a4a">
+
+            </android.support.design.widget.TabLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/tools"
+            android:id="@+id/card_share_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="-20dp"
+            android:translationZ="4dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="6.5dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            card_view:cardElevation="5dp">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabTeacherRank"
+                android:layout_width="wrap_content"
+                android:layout_height="0.1dp"
+                android:layout_gravity="center_horizontal"
+                app:tabIndicatorHeight="0dp">
+
+            </android.support.design.widget.TabLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="87dp"
+                android:layout_marginRight="87dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tabbackground"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tabbackground01"
+                    android:text="周榜"
+                    android:textColor="#ffffffff"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/but2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tabbackground10"
+                    android:text="月榜"
+                    android:textColor="#ffF5A623"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/but3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tabbackground20"
+                    android:text="代读榜"
+                    android:textColor="#ffF5A623"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vpTeacherRank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="45dp"
+                android:paddingBottom="55dp"
+                />
+
+            <ProgressBar
+                android:id="@+id/probarTeacher"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:visibility="gone" />
+        </android.support.v7.widget.CardView>
+    </android.support.design.widget.CoordinatorLayout>
+</com.norris.believer.view.VerticalSwipeRefreshLayout>

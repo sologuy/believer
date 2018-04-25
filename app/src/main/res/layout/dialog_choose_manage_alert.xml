@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/alert_dialog_view"
+    android:layout_width="215dp"
+    android:layout_height="120dp"
+    android:background="@drawable/dialog_choose"
+    android:maxHeight="800dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:minWidth="300dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/alert_message"
+        android:layout_width="wrap_content"
+        android:layout_height="79dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:maxWidth="250dp"
+        android:padding="15dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cecece" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancelBut"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_choose_but2"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#0076FF"
+            android:textSize="12sp" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#cecece"/>
+        <TextView
+            android:id="@+id/yesBut"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_choose_but1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#0076FF"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

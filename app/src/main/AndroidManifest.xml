@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.norris.believer">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <!-- 申明应用需要用到相机 -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <!-- 申明应用需要用到自动对焦 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 申请相机使用权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 申明录音权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <!-- 申明网络权限 -->
+    <application
+        android:name=".Application.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:label="@string/app_name1"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        >
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.norris.believer.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".Activity.EmptyActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".Activity.FlowerActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+
+
+
+        <activity
+            android:name=".Activity.EmojiActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".Activity.LongImgeActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".Activity.AppBarActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".Activity.AppBarActivity1"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".Activity.AppBarActivity2"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".Activity.AppBarActivity3"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".Activity.ShowderActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".Activity.MyViewActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+        <activity
+            android:name=".Activity.StarActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            />
+    </application>
+
+</manifest>

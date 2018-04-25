@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <com.lhdd.reading4.view.CircleImageView
+        android:id="@+id/act_comment_item_head"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="12dp"
+        android:src="@mipmap/defaulthead" />
+
+    <TextView
+        android:id="@+id/act_comment_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/act_comment_item_head"
+        android:text=""
+        android:textColor="@color/tv_color_title"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/act_comment_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/act_comment_item_name"
+        android:layout_below="@+id/act_comment_item_name"
+        android:layout_marginTop="3dp"
+        android:textColor="#9b9b9b"
+        android:textSize="9sp" />
+
+    <ImageView
+        android:id="@+id/act_comment_like_icon"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/act_comment_item_liskenum"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:src="@mipmap/act_video_web_like_not" />
+
+    <TextView
+        android:id="@+id/act_comment_item_liskenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="6dp"
+        android:text="0"
+        android:textColor="#9b9b9b"
+        android:textSize="9sp" />
+
+    <ImageView
+        android:id="@+id/act_comment_item_responseicon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="2dp"
+        android:padding="3dp"
+        android:src="@mipmap/act_clo_class_item_comment" />
+
+    <TextView
+        android:id="@+id/act_comment_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/act_comment_item_date"
+        android:layout_below="@+id/act_comment_item_date"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"
+        android:text=""
+        android:textColor="#666666"
+        android:textSize="10sp" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/act_comment_item_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/act_comment_item_content"
+        android:layout_marginTop="7dp"
+        android:background="#f8f8f8" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee" />
+</RelativeLayout>

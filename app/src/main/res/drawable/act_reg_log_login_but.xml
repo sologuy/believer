@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">--><!--&lt;!&ndash; 连框颜色值 &ndash;&gt;--><!--<item>--><!--<shape>--><!--<solid android:color="#ff8000" />--><!--<corners--><!--android:bottomLeftRadius="1dip"--><!--android:bottomRightRadius="1dip"--><!--android:topLeftRadius="1dip"--><!--android:topRightRadius="1dip" />--><!--</shape>--><!--</item>--><!--&lt;!&ndash; 主体背景颜色值 &ndash;&gt;--><!--<item--><!--android:bottom="2dip"--><!--android:left="8dip"--><!--android:right="8dip"--><!--android:top="2dip"--><!--&gt;--><!--<shape>--><!--<corners--><!--android:bottomLeftRadius="2dip"--><!--android:bottomRightRadius="2dip"--><!--android:topLeftRadius="2dip"--><!--android:topRightRadius="2dip" />--><!--</shape>--><!--</item>--><!--</layer-list> -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="40dp" />
+            <solid android:color="#ded2bb" />
+            <stroke android:width="0.5dp" android:color="#cff7931e" />
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape>
+            <corners android:radius="40dp" />
+            <solid android:color="#fff" />
+            <stroke android:width="0.5dp" android:color="#cff7931e" />
+        </shape>
+    </item>
+</selector>

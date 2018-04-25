@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F39700</color>
+    <color name="f6a623">#F39700</color>
+    <color name="F39700">#F39700</color>
+
+    <color name="black">#000000</color>
+    <color name="gray">#eeeeee</color>
+    <color name="qian">#a3a3a3</color>
+    <color name="graydeeper">#666666</color>
+    <color name="graydeeper2">#888888</color>
+    <color name="graylighter">#F8F8F8</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow">#f39700</color>
+    <color name="blue">#1dacec</color>
+    <color name="linegray">#E7E7E7</color>
+
+
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="graph_red">#ff0000</color>
+    <color name="graph_yellow">#F39700</color>
+    <color name="graph_yellowligter">#fcdd20</color>
+    <color name="graph_green">#5ec434</color>
+    <color name="graph_blue">#008fd5</color>
+    <color name="graph_bluedeeper">#006bbd</color>
+    <color name="graph_purple">#ce4940</color>
+
+    <color name="tv_color_text">#6f6f6f</color>
+    <color name="tv_color_title">#4a4a4a</color>
+    <color name="tv_color_clo_name">#ffffff</color>
+    <color name="tv_home_tab_bar_checked_yes">#F39700</color>
+    <color name="tv_home_tab_bar_checked_no">#999999</color>
+
+    <color name="mediacontroller_bg_pressed">#89dcd9</color>
+    <color name="mediacontroller_bg">#99000000</color>
+
+    <color name="colorf2">#fff2f2f2</color>
+    <color name="colorfff">#ffffffff</color>
+
+    <color name="google_blue">#4285F4</color>
+    <color name="google_green">#34A853</color>
+    <color name="google_yellow">#FBBC05</color>
+    <color name="google_red">#EA4335</color>
+
+    <color name="ripplecolor">#2fedc076</color>
+
+    <color name="black_dft">#3c3c3c</color>
+    <color name="translate">#00000000</color>
+    <color name="bg_main">#f0eff4</color>
+    <color name="gray_dft">#888888</color>
+    <color name="dividing_light">#f0f0f0</color>
+    <color name="dividing_dark">#c9c9c9</color>
+
+    <color name="orange_dft">#f2a732</color>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lhdd.reading4.Activity.EmptyActivity">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/wordsRecy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp" />
+    <RelativeLayout
+        android:layout_below="@+id/wordsRecy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/wordprobar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/wordbottomtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="已经到底了"
+            android:textColor="#4a4a4a"
+            android:textSize="12sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <include layout="@layout/template_public_header" />
+</RelativeLayout>

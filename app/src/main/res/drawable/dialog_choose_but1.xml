@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:bottomRightRadius="6dp" />
+            <solid android:color="#f2f2f2" />
+        </shape>
+    </item>
+    <!-- 默认的状态,必须放在最后 -->
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <corners android:bottomRightRadius="6dp" />
+            <solid android:color="#ffffffff" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+    <ImageView
+        android:id="@+id/imgHead"
+        android:layout_width="71dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_read_party_img" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgHead"
+        android:layout_marginLeft="13dp"
+        android:layout_toLeftOf="@+id/tvType"
+        android:layout_toRightOf="@+id/imgHead"
+        android:ellipsize="end"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:text="营销"
+        android:textColor="#4a4a4a"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/imgHead"
+        android:ellipsize="end"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:text="什么什么如何提升沟通能力？沟通是我们每天工作的开始"
+        android:textColor="@color/tv_color_text"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="55dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imgHead"
+        android:layout_marginRight="13dp"
+        android:background="@drawable/act_sharemind_type_bg"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="提问"
+        android:textColor="#F5A623"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e9e9e9" />
+
+</RelativeLayout>

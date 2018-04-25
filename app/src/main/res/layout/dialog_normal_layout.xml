@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:padding="20.0dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/act_read_party_create_but_yellow"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_18_ffffff"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:gravity="center"
+            android:text="发现新版本"
+            android:visibility="visible" 
+            
+            />
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            >
+            <TextView
+                android:id="@+id/tv_title_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvUpdateVersion"
+                android:layout_alignTop="@+id/tvUpdateVersion"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                android:text="新增上拉刷新，下拉加载更多功能"
+                android:textSize="13sp"
+                android:layout_alignParentTop="true"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                android:id="@+id/tv_title_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvUpdateVersion"
+                android:layout_alignTop="@+id/tvUpdateVersion"
+                android:layout_centerVertical="true"
+                android:text="针对部分机型，优化视频播放闪退情况"
+                android:textSize="13sp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="24dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                android:id="@+id/tv_title_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvUpdateVersion"
+                android:layout_alignTop="@+id/tvUpdateVersion"
+                android:layout_centerVertical="true"
+                android:text="读书会模块暂时关闭，修复已知部分Bug"
+                android:textSize="13sp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="44dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                android:id="@+id/tvUpdateVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvUpdateTimer"
+                android:layout_centerVertical="true"
+                android:text="新版本"
+                android:textSize="15sp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvUpdateSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvUpdateVersion"
+                android:layout_below="@+id/tvUpdateVersion"
+                android:text="新版本大小"
+                android:textSize="15sp"
+                android:layout_marginTop="7dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvUpdateTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvUpdateVersion"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="32dp"
+                android:text="版本时间"
+                android:textSize="15sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="#ffd0d0d0" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/dialog_mydialog_but"
+            >
+		
+           <RelativeLayout 
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              >
+			
+               <View
+                   android:id="@+id/viewPos"
+                   android:layout_width="1.0px"
+                   android:layout_height="fill_parent"
+                   android:layout_alignParentTop="true"
+                   android:layout_centerHorizontal="true"
+                   android:background="#ffd0d0d0" />
+
+               <Button
+                   android:id="@+id/negativeButton"
+                   style="?android:attr/buttonStyleSmall"
+                   android:layout_width="fill_parent"
+                   android:layout_height="fill_parent"
+                   android:layout_toLeftOf="@+id/viewPos"
+                   android:text="以后再说" 
+                   android:textColor="@color/qian"
+                   android:background="@color/white"
+                   />
+
+               <Button
+                   android:id="@+id/positiveButton"
+                   style="?android:attr/buttonStyleSmall"
+                   android:layout_width="fill_parent"
+                   android:layout_height="fill_parent"
+                   android:layout_toRightOf="@+id/viewPos"
+                   android:text="立即更新" 
+                   android:textColor="@color/yellow"
+                   android:background="@color/white"
+                   />
+              
+            </RelativeLayout>
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</FrameLayout>

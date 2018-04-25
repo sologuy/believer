@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:orientation="vertical"
+    tools:context="com.lhdd.reading4.Activity.ReadPlanDetailActivity">
+
+    <include layout="@layout/template_public_header" />
+
+    <com.lhdd.reading4.widget.MyScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayoutHeader">
+
+        <RelativeLayout
+            android:id="@+id/act_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_margin="12dp">
+
+            <com.lhdd.reading4.view.CircleImageView
+                android:id="@+id/act_read_plan_head"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:transitionName="image_head"
+                android:src="@mipmap/defaulthead" />
+
+            <TextView
+                android:id="@+id/act_read_plan_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/act_read_plan_head"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/act_read_plan_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/act_read_plan_name"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+            <io.github.rockerhieu.emojicon.EmojiconTextView
+                android:id="@+id/act_read_plan_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_read_plan_name"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/act_read_plan_head"
+                android:background="@drawable/act_press"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2dp"
+                android:text=""
+                android:textColor="#000000" />
+
+            <ImageView
+                android:id="@+id/act_read_plan_comment_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:paddingRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/act_read_plan_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:src="@mipmap/act_read_party_comment_icon" />
+
+            <RelativeLayout
+                android:id="@+id/act_read_plan_comment_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_read_plan_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/act_read_plan_head"
+                android:background="@drawable/act_read_party_plan_comment_bg">
+
+                <ImageView
+                    android:id="@+id/act_read_item_comment_rewardicon"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="3dp"
+                    android:src="@mipmap/act_read_plan_like_icon" />
+
+                <TextView
+                    android:id="@+id/act_read_plan_comment_list_rewardname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="3dp"
+                    android:padding="1dp"
+                    android:text=""
+                    android:textColor="#f6a623"
+                    android:textSize="13sp" />
+
+                <View
+                    android:id="@+id/act_read_item_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/act_read_plan_comment_list_rewardname"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:background="#cecece" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_read_item_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/act_read_plan_comment_list_rewardname"
+                    android:layout_marginTop="10dp"
+                    android:divider="@null"
+                    android:dividerHeight="0dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/act_read_plan_comment_rl" />
+        </RelativeLayout>
+    </com.lhdd.reading4.widget.MyScrollView>
+
+    <RelativeLayout
+        android:id="@+id/act_read_party_comment_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f2f2f2"
+        android:clickable="true"
+        android:visibility="gone"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2" />
+
+        <io.github.rockerhieu.emojicon.EmojiconEditText
+            android:id="@+id/act_comment_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/act_comment_send"
+            android:background="@null"
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:minLines="2"
+            android:paddingBottom="6dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="8dp"
+            android:text=""
+            android:textColor="#4c4c4c"
+            android:textColorHint="#c8c8c8"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/act_comment_send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="发送"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#eeeeee" />
+
+    </RelativeLayout>
+</RelativeLayout>
