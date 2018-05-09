@@ -7,8 +7,6 @@ import com.norris.believer.Base.BaseActivity;
 import com.norris.believer.R;
 import com.norris.believer.view.MyTriangleView;
 
-import java.util.HashMap;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -44,7 +42,7 @@ public class MyViewActivity extends BaseActivity {
     }
 
     public void initData() {
-        HashMap
+//        HashMap
     }
 
     public void initViewOper() {

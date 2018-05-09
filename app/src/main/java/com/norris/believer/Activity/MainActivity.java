@@ -74,6 +74,7 @@ public class MainActivity extends BaseActivity {
         itemNames.add("7Android阴影实现");//Demo 地址 https://segmentfault.com/a/1190000011809297
         itemNames.add("8自定义View");//Demo 地址 https://segmentfault.com/a/1190000011809297
         itemNames.add("9星级评分");//Demo 地址 https://segmentfault.com/a/1190000011809297
+        itemNames.add("10通知和Rxjava");//Demo 地址 https://segmentfault.com/a/1190000011809297
     }
 
     private void initViewOper() {
@@ -122,6 +123,9 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 9:
                         startAct(StarActivity.class);
+                        break;
+                    case 10:
+                        startAct(NotifyActivity.class);
                         break;
                 }
             }
