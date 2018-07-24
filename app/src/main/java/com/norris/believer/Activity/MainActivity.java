@@ -78,6 +78,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initViewOper() {
+
         recycler.setHasFixedSize(true);
         recycler.setLayoutManager(new FullLinearLayoutManager(this) );
         ((SimpleItemAnimator) recycler.getItemAnimator()).setSupportsChangeAnimations(false);
