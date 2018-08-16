@@ -106,6 +106,9 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity android:name=".Activity.MyKotlinActivity"></activity>
+
+        <activity android:name=".Activity.RVActivity" />
+
     </application>
 
 </manifest>
