@@ -3,25 +3,20 @@ package com.norris.believer.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SimpleItemAnimator;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.norris.believer.Adapter.CommonRecyAdapter;
+import com.norris.believer.Adapter.MainRecyAdapter;
 import com.norris.believer.Base.BaseActivity;
 import com.norris.believer.R;
-import com.norris.believer.view.FullLinearLayoutManager;
-import com.zhy.adapter.recyclerview.MultiItemTypeAdapter;
-import com.zhy.adapter.recyclerview.base.ViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import jp.wasabeef.glide.transformations.BlurTransformation;
 
 
 public class MainActivity extends BaseActivity {
@@ -34,7 +29,8 @@ public class MainActivity extends BaseActivity {
     SwipeRefreshLayout swipeLayout;
 
     private List<String> itemNames = new ArrayList<>();
-    private CommonRecyAdapter<String> commonAdapter;
+//    private CommonRecyAdapter<String> commonAdapter;
+    MainRecyAdapter mainRecyAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,11 +43,11 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initView() {
-        Glide
-                .with(this)
-                .load(R.mipmap.init_bg)
-                .bitmapTransform(new BlurTransformation(this,80))
-                .into(imgPhoto);
+//        Glide
+//                .with(this)
+//                .load(R.mipmap.init_bg)
+//                .bitmapTransform(new BlurTransformation(this,80))
+//                .into(imgPhoto);
         swipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -75,25 +71,24 @@ public class MainActivity extends BaseActivity {
         itemNames.add("8自定义View");//Demo 地址 https://segmentfault.com/a/1190000011809297
         itemNames.add("9星级评分");//Demo 地址 https://segmentfault.com/a/1190000011809297
         itemNames.add("10通知和Rxjava");//Demo 地址 https://segmentfault.com/a/1190000011809297
+        itemNames.add("11RV-ItemTouchHelper");//Demo 地址 https://www.jianshu.com/p/e3426dcc8ef1
     }
 
     private void initViewOper() {
-
-        recycler.setHasFixedSize(true);
-        recycler.setLayoutManager(new FullLinearLayoutManager(this) );
-        ((SimpleItemAnimator) recycler.getItemAnimator()).setSupportsChangeAnimations(false);
-
-        recycler.setAdapter(commonAdapter = new CommonRecyAdapter<String>
-                (this, R.layout.activity_main_recy_item, itemNames) {
+        mainRecyAdapter = new MainRecyAdapter(this,itemNames);
+        recycler.setLayoutManager(new LinearLayoutManager(this) );
+//        ((SimpleItemAnimator) recycler.getItemAnimator()).setSupportsChangeAnimations(false);
+        recycler.setAdapter(mainRecyAdapter);
+//        recycler.setAdapter(commonAdapter = new CommonRecyAdapter<String>
+//                (this, R.layout.activity_main_recy_item, itemNames) {
+//            @Override
+//            protected void convert(ViewHolder holder, String s, int position) {
+//                holder.setText(R.id.tvItemName, s);
+//            }
+//        });
+        mainRecyAdapter.setOnItemClickListener(new MainRecyAdapter.OnItemClickListener() {
             @Override
-            protected void convert(ViewHolder holder, String s, int position) {
-                holder.setText(R.id.tvItemName, s);
-            }
-        });
-
-        commonAdapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
+            public void onItemClick(View view, int position) {
                 switch (position){
                     case 0:
                         startAct(FlowerActivity.class);
@@ -128,14 +123,61 @@ public class MainActivity extends BaseActivity {
                     case 10:
                         startAct(NotifyActivity.class);
                         break;
+                    case 11:
+                        startAct(RVActivity.class);
+                        break;
                 }
             }
-
-            @Override
-            public boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position) {
-                return false;
-            }
         });
+
+//        commonAdapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
+//                switch (position){
+//                    case 0:
+//                        startAct(FlowerActivity.class);
+//                        break;
+//                    case 1:
+//                        startAct(EmojiActivity.class);
+//                        break;
+//                    case 2:
+//                        startAct(LongImgeActivity.class);
+//                        break;
+//                    case 3:
+//                        startAct(AppBarActivity.class);
+//                        break;
+//                    case 4:
+//                        startAct(AppBarActivity1.class);
+//                        break;
+//                    case 5:
+//                        startAct(AppBarActivity2.class);
+//                        break;
+//                    case 6:
+//                        startAct(AppBarActivity3.class);
+//                        break;
+//                    case 7:
+//                        startAct(ShowderActivity.class);
+//                        break;
+//                    case 8:
+//                        startAct(MyViewActivity.class);
+//                        break;
+//                    case 9:
+//                        startAct(StarActivity.class);
+//                        break;
+//                    case 10:
+//                        startAct(NotifyActivity.class);
+//                        break;
+//                    case 11:
+//                        startAct(RVActivity.class);
+//                        break;
+//                }
+//            }
+//
+//            @Override
+//            public boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position) {
+//                return false;
+//            }
+//        });
     }
 
 }

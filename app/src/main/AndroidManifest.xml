@@ -120,6 +120,7 @@
             android:screenOrientation="portrait"
             android:launchMode="singleTop"
             />
+        <activity android:name=".Activity.RVActivity" />
     </application>
 
 </manifest>

@@ -10,8 +10,8 @@ android {
             keyAlias 'android'
             keyPassword 'android'
             storePassword 'android'
-//            storeFile file('/Users/android/androidproject/believer/norris.jks')
-            storeFile file('/Users/wyj/androidproject/believer/norris.jks')
+            storeFile file('/Users/sos/project/believer/norris.jks')
+//            storeFile file('/Users/wyj/androidproject/believer/norris.jks')
 
         }
     }
