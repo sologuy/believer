@@ -10,8 +10,8 @@ android {
             keyAlias 'android'
             keyPassword 'android'
             storePassword 'android'
-            storeFile file('/Users/sos/project/believer/norris.jks')
-//            storeFile file('/Users/wyj/androidproject/believer/norris.jks')
+//            storeFile file('/Users/sos/project/believer/norris.jks')
+            storeFile file('/Users/wyj/androidproject/believer/norris.jks')
 
         }
     }
@@ -46,7 +46,7 @@ android {
             shrinkResources false
         }
         debug {
-            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.release
 //            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 //             //混淆
 //            minifyEnabled true

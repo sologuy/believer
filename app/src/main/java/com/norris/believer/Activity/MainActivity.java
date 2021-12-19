@@ -128,7 +128,7 @@ public class MainActivity extends BaseActivity {
                         startAct(NotifyActivity.class);
                         break;
                     case 11:
-                        startAct(MyKotlinActivity.class);
+//                        startAct(MyKotlinActivity.class);
                         break;
                     case 12:
                         startAct(RVActivity.class);

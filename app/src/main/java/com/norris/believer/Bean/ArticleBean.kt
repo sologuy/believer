@@ -5,7 +5,7 @@ package com.norris.believer.Bean
  */
 
 class ArticleBean {
-    var mindsharelist: HomeBean.MindsharelistBean? = null
+   public var mindsharelist: HomeBean.MindsharelistBean? = null
         set(value) {
             field = value
         }

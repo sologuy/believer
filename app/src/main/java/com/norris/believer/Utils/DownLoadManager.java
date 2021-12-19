@@ -45,26 +45,26 @@ public class DownLoadManager {
     private static Boolean isOk = false;
     public static Boolean downloadFile(final Context context, String url) {
         DialogUtils.createProgressDialog(context, null);
-        downloadSub = RetrofitUtil.getInstance().downloadFile(url,
-                new ProgressSubscriber<ResponseBody>(context, new SubscriberOnNextListener<ResponseBody>() {
-                    @Override
-                    public void onNext(final ResponseBody responseBody) {
-                        isOk = DownLoadManager.writeResBodyToDisk(context, responseBody);
-                        DialogUtils.dismissProgressDialog();
-                        loge("是否下载完成==" + isOk);
-                        if (isOk) {
-                            Toast.makeText(context,"图片已保存到文件夹sdcard/Reading4", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        loge("下载引导页图片错误==" + e.getLocalizedMessage());
-                        Toast.makeText(context,"下载失败,请检查后重试", Toast.LENGTH_SHORT).show();
-                        isOk = false;
-                        DialogUtils.dismissProgressDialog();
-                    }
-                }));
+//        downloadSub = RetrofitUtil.getInstance().downloadFile(url,
+//                new ProgressSubscriber<ResponseBody>(context, new SubscriberOnNextListener<ResponseBody>() {
+//                    @Override
+//                    public void onNext(final ResponseBody responseBody) {
+//                        isOk = DownLoadManager.writeResBodyToDisk(context, responseBody);
+//                        DialogUtils.dismissProgressDialog();
+//                        loge("是否下载完成==" + isOk);
+//                        if (isOk) {
+//                            Toast.makeText(context,"图片已保存到文件夹sdcard/Reading4", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        loge("下载引导页图片错误==" + e.getLocalizedMessage());
+//                        Toast.makeText(context,"下载失败,请检查后重试", Toast.LENGTH_SHORT).show();
+//                        isOk = false;
+//                        DialogUtils.dismissProgressDialog();
+//                    }
+//                }));
         RxApiManager.get().add(TAG + 1, downloadSub);
         return isOk;
     }
